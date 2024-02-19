@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:33:02 by maxime            #+#    #+#             */
-/*   Updated: 2024/02/15 16:30:11 by mdesrose         ###   ########.fr       */
+/*   Updated: 2024/02/19 13:19:05 by maxime           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,7 @@ Span::Span(unsigned int N)
 
 Span::Span(const Span& other)
 {
-    // for (size_t i = 0; i < _array.size();i++)
-    // {
-    //     other._array[i] = _array[i];
-    // }
-    for (std::vector<int>::iterator it = other._array.begin(); it != _array.end();it++)
-    {
-        _array.push_back(it);
-    }
+    (void)other;
 }
 
 Span& Span::operator=(const Span& other)
