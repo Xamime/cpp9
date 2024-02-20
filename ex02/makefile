@@ -1,27 +1,16 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: maxime <maxime@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/07 18:52:45 by maxime            #+#    #+#              #
-#    Updated: 2024/02/19 13:06:51 by maxime           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
 NAME = PmergeMe
 
 CC = c++
 
-SRC =	./srcs/main.cpp \
-		./srcs/PmergeMe.cpp \
+SRC =	main.cpp \
+		PmergeMe.cpp \
 
 OBJ = ${SRC:.cpp=.o}
 
 INC = ./includes
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 .cpp.o:
 	${CC} ${CPPFLAGS} -I${INC} -c $< -o ${<:.cpp=.o}
@@ -37,7 +26,7 @@ clean:
 	rm -f ${OBJ}
 
 fclean: clean
-	rm -f ${NAME} ${DEPS}
+	rm -f ${NAME}
 
 re: fclean all
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:14:54 by mdesrose          #+#    #+#             */
-/*   Updated: 2024/02/10 15:25:18 by maxime           ###   ########.fr       */
+/*   Updated: 2024/02/20 18:16:41 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void    find_value(std::map<std::string, float>& data, std::string& line)
     std::string                             valuestr;
     std::map<std::string, float>::iterator  it;
     std::map<std::string, float>::iterator  previous_ite;
-    size_t pos = line.find(" | ");
+    size_t                                  pos = line.find(" | ");
     if (pos != std::string::npos)
     {
         date = line.substr(0, pos);

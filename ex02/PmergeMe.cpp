@@ -1,14 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PmergeMe.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/15 18:55:20 by maxime            #+#    #+#             */
-/*   Updated: 2024/02/19 13:07:12 by maxime           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include <iostream>
 #include <algorithm>
@@ -22,7 +12,6 @@
 unsigned int ft_stou(const std::string& str);
 
 PmergeMe::PmergeMe() {};
-
 PmergeMe::~PmergeMe() {};
 
 static void printVec(std::vector<unsigned int>& vec)
@@ -65,7 +54,8 @@ static std::vector<unsigned int> mergeVecs(std::vector<unsigned int>& left, std:
     return result;
 }
 
-static std::vector<unsigned int> mergeInsertVec(std::vector<unsigned int>& vec) {
+static std::vector<unsigned int> mergeInsertVec(std::vector<unsigned int>& vec)
+{
     if (vec.size() <= 1) {
         return vec;
     }
